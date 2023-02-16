@@ -1,0 +1,1127 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "NftAuctionCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nft",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_paymentReceiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_nftIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_startingBids",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "createNFTAuction",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600080546001600160a01b03191633179055610dd2806100326000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063d5777e051461006a575b600080fd5b60005461004e906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61004e6100783660046101c6565b600080546001600160a01b0316331461009057600080fd5b60008060009054906101000a90046001600160a01b0316868686866040516100b7906100ec565b6100c5959493929190610286565b604051809103906000f0801580156100e1573d6000803e3d6000fd5b509695505050505050565b610ac4806102d983390190565b80356001600160a01b038116811461011057600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600082601f83011261013c57600080fd5b8135602067ffffffffffffffff8083111561015957610159610115565b8260051b604051601f19603f8301168101818110848211171561017e5761017e610115565b60405293845285810183019383810192508785111561019c57600080fd5b83870191505b848210156101bb578135835291830191908301906101a2565b979650505050505050565b600080600080608085870312156101dc57600080fd5b6101e5856100f9565b93506101f3602086016100f9565b9250604085013567ffffffffffffffff8082111561021057600080fd5b61021c8883890161012b565b9350606087013591508082111561023257600080fd5b5061023f8782880161012b565b91505092959194509250565b600081518084526020808501945080840160005b8381101561027b5781518752958201959082019060010161025f565b509495945050505050565b6001600160a01b03868116825285811660208301528416604082015260a0606082018190526000906102ba9083018561024b565b82810360808401526102cc818561024b565b9897505050505050505056fe60806040523480156200001157600080fd5b5060405162000ac438038062000ac48339810160408190526200003491620001e6565b600180546001600160a01b038088166001600160a01b031992831617909255600080548784169083161790556002805492861692909116919091179055815162000086906003906020850190620000a8565b5080516200009c906004906020840190620000a8565b50505050505062000289565b828054828255906000526020600020908101928215620000e6579160200282015b82811115620000e6578251825591602001919060010190620000c9565b50620000f4929150620000f8565b5090565b5b80821115620000f45760008155600101620000f9565b80516001600160a01b03811681146200012757600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126200015457600080fd5b815160206001600160401b03808311156200017357620001736200012c565b8260051b604051601f19603f830116810181811084821117156200019b576200019b6200012c565b604052938452858101830193838101925087851115620001ba57600080fd5b83870191505b84821015620001db57815183529183019190830190620001c0565b979650505050505050565b600080600080600060a08688031215620001ff57600080fd5b6200020a866200010f565b94506200021a602087016200010f565b93506200022a604087016200010f565b60608701519093506001600160401b03808211156200024857600080fd5b6200025689838a0162000142565b935060808801519150808211156200026d57600080fd5b506200027c8882890162000142565b9150509295509295909350565b61082b80620002996000396000f3fe6080604052600436106100a75760003560e01c8063454a2ab311610064578063454a2ab3146101ec57806347ccca02146101ff5780638da5cb5b14610237578063be9a655514610257578063cb37f3b21461026c578063efbe1c1c1461028c57600080fd5b806312fa6feb146100ac578063150b7a02146100e25780631f2698ab146101265780633197cbb614610147578063379607f51461016b5780634423c5f11461018d575b600080fd5b3480156100b857600080fd5b506001546100cd90600160a81b900460ff1681565b60405190151581526020015b60405180910390f35b3480156100ee57600080fd5b5061010d6100fd36600461069b565b630a85bd0160e11b949350505050565b6040516001600160e01b031990911681526020016100d9565b34801561013257600080fd5b506001546100cd90600160a01b900460ff1681565b34801561015357600080fd5b5061015d60055481565b6040519081526020016100d9565b34801561017757600080fd5b5061018b61018636600461077b565b6102a1565b005b34801561019957600080fd5b506101cd6101a836600461077b565b600660205260009081526040902080546001909101546001600160a01b039091169082565b604080516001600160a01b0390931683526020830191909152016100d9565b61018b6101fa36600461077b565b61031e565b34801561020b57600080fd5b5060005461021f906001600160a01b031681565b6040516001600160a01b0390911681526020016100d9565b34801561024357600080fd5b5060015461021f906001600160a01b031681565b34801561026357600080fd5b5061018b6104e2565b34801561027857600080fd5b5060025461021f906001600160a01b031681565b34801561029857600080fd5b5061018b610573565b600080548282526006602052604091829020549151632142170760e11b81523060048201526001600160a01b039283166024820152604481018490529116906342842e0e90606401600060405180830381600087803b15801561030357600080fd5b505af1158015610317573d6000803e3d6000fd5b5050505050565b600154600160a01b900460ff166103645760405162461bcd60e51b81526020600482015260056024820152640854d5149560da1b60448201526064015b60405180910390fd5b600554421061039b5760405162461bcd60e51b815260206004820152600360248201526211539160ea1b604482015260640161035b565b60008181526006602052604090206001015434116103b857600080fd5b6000546040516331a9108f60e11b81526004810183905230916001600160a01b031690636352211e90602401602060405180830381865afa158015610401573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104259190610794565b6001600160a01b03161461043857600080fd5b60008181526006602052604081206001015490036104795760048181548110610463576104636107b8565b9060005260206000200154341161047957600080fd5b60008181526006602052604080822060018101805482546001600160a01b03198116331790935534909155915191926001600160a01b0390911691829184156108fc02918591818181858888f193505050501580156104dc573d6000803e3d6000fd5b50505050565b600154600160a01b900460ff16156105255760405162461bcd60e51b815260206004820152600660248201526514d51495115160d21b604482015260640161035b565b6001805460ff60a01b1916600160a01b17905561054542620151806107ce565b6005556040517f1b55ba3aa851a46be3b365aee5b5c140edd620d578922f3e8466d2cbd96f954b90600090a1565b600154600160a01b900460ff166105b45760405162461bcd60e51b81526020600482015260056024820152640854d5149560da1b604482015260640161035b565b6005544210156105ef5760405162461bcd60e51b815260040161035b906020808252600490820152630851539160e21b604082015260600190565b600154600160a81b900460ff161561062f5760405162461bcd60e51b815260206004820152600360248201526211539160ea1b604482015260640161035b565b6001805460ff60a81b1916600160a81b1790556040517f06e649079f276fcfc97b1e5cbfbb65937dac6a51ee164e3190e707e27ff345fa90600090a1565b6001600160a01b038116811461068257600080fd5b50565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156106b157600080fd5b84356106bc8161066d565b935060208501356106cc8161066d565b925060408501359150606085013567ffffffffffffffff808211156106f057600080fd5b818701915087601f83011261070457600080fd5b81358181111561071657610716610685565b604051601f8201601f19908116603f0116810190838211818310171561073e5761073e610685565b816040528281528a602084870101111561075757600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b60006020828403121561078d57600080fd5b5035919050565b6000602082840312156107a657600080fd5b81516107b18161066d565b9392505050565b634e487b7160e01b600052603260045260246000fd5b808201808211156107ef57634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220679f047a98413778e2d32a4920b1f37f1224876ec6c69e453862591d65b5f52b64736f6c63430008110033a264697066735822122020d7d0fabab1143e9db4b610a6dce2ccf2dc7bc7301006b1d626465259942ef164736f6c63430008110033",
+    "sourceMap": "110:603:26:-:0;;;243:48;;;;;;;;;-1:-1:-1;266:5:26;:18;;-1:-1:-1;;;;;;266:18:26;274:10;266:18;;;110:603;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063d5777e051461006a575b600080fd5b60005461004e906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61004e6100783660046101c6565b600080546001600160a01b0316331461009057600080fd5b60008060009054906101000a90046001600160a01b0316868686866040516100b7906100ec565b6100c5959493929190610286565b604051809103906000f0801580156100e1573d6000803e3d6000fd5b509695505050505050565b610ac4806102d983390190565b80356001600160a01b038116811461011057600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600082601f83011261013c57600080fd5b8135602067ffffffffffffffff8083111561015957610159610115565b8260051b604051601f19603f8301168101818110848211171561017e5761017e610115565b60405293845285810183019383810192508785111561019c57600080fd5b83870191505b848210156101bb578135835291830191908301906101a2565b979650505050505050565b600080600080608085870312156101dc57600080fd5b6101e5856100f9565b93506101f3602086016100f9565b9250604085013567ffffffffffffffff8082111561021057600080fd5b61021c8883890161012b565b9350606087013591508082111561023257600080fd5b5061023f8782880161012b565b91505092959194509250565b600081518084526020808501945080840160005b8381101561027b5781518752958201959082019060010161025f565b509495945050505050565b6001600160a01b03868116825285811660208301528416604082015260a0606082018190526000906102ba9083018561024b565b82810360808401526102cc818561024b565b9897505050505050505056fe60806040523480156200001157600080fd5b5060405162000ac438038062000ac48339810160408190526200003491620001e6565b600180546001600160a01b038088166001600160a01b031992831617909255600080548784169083161790556002805492861692909116919091179055815162000086906003906020850190620000a8565b5080516200009c906004906020840190620000a8565b50505050505062000289565b828054828255906000526020600020908101928215620000e6579160200282015b82811115620000e6578251825591602001919060010190620000c9565b50620000f4929150620000f8565b5090565b5b80821115620000f45760008155600101620000f9565b80516001600160a01b03811681146200012757600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126200015457600080fd5b815160206001600160401b03808311156200017357620001736200012c565b8260051b604051601f19603f830116810181811084821117156200019b576200019b6200012c565b604052938452858101830193838101925087851115620001ba57600080fd5b83870191505b84821015620001db57815183529183019190830190620001c0565b979650505050505050565b600080600080600060a08688031215620001ff57600080fd5b6200020a866200010f565b94506200021a602087016200010f565b93506200022a604087016200010f565b60608701519093506001600160401b03808211156200024857600080fd5b6200025689838a0162000142565b935060808801519150808211156200026d57600080fd5b506200027c8882890162000142565b9150509295509295909350565b61082b80620002996000396000f3fe6080604052600436106100a75760003560e01c8063454a2ab311610064578063454a2ab3146101ec57806347ccca02146101ff5780638da5cb5b14610237578063be9a655514610257578063cb37f3b21461026c578063efbe1c1c1461028c57600080fd5b806312fa6feb146100ac578063150b7a02146100e25780631f2698ab146101265780633197cbb614610147578063379607f51461016b5780634423c5f11461018d575b600080fd5b3480156100b857600080fd5b506001546100cd90600160a81b900460ff1681565b60405190151581526020015b60405180910390f35b3480156100ee57600080fd5b5061010d6100fd36600461069b565b630a85bd0160e11b949350505050565b6040516001600160e01b031990911681526020016100d9565b34801561013257600080fd5b506001546100cd90600160a01b900460ff1681565b34801561015357600080fd5b5061015d60055481565b6040519081526020016100d9565b34801561017757600080fd5b5061018b61018636600461077b565b6102a1565b005b34801561019957600080fd5b506101cd6101a836600461077b565b600660205260009081526040902080546001909101546001600160a01b039091169082565b604080516001600160a01b0390931683526020830191909152016100d9565b61018b6101fa36600461077b565b61031e565b34801561020b57600080fd5b5060005461021f906001600160a01b031681565b6040516001600160a01b0390911681526020016100d9565b34801561024357600080fd5b5060015461021f906001600160a01b031681565b34801561026357600080fd5b5061018b6104e2565b34801561027857600080fd5b5060025461021f906001600160a01b031681565b34801561029857600080fd5b5061018b610573565b600080548282526006602052604091829020549151632142170760e11b81523060048201526001600160a01b039283166024820152604481018490529116906342842e0e90606401600060405180830381600087803b15801561030357600080fd5b505af1158015610317573d6000803e3d6000fd5b5050505050565b600154600160a01b900460ff166103645760405162461bcd60e51b81526020600482015260056024820152640854d5149560da1b60448201526064015b60405180910390fd5b600554421061039b5760405162461bcd60e51b815260206004820152600360248201526211539160ea1b604482015260640161035b565b60008181526006602052604090206001015434116103b857600080fd5b6000546040516331a9108f60e11b81526004810183905230916001600160a01b031690636352211e90602401602060405180830381865afa158015610401573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104259190610794565b6001600160a01b03161461043857600080fd5b60008181526006602052604081206001015490036104795760048181548110610463576104636107b8565b9060005260206000200154341161047957600080fd5b60008181526006602052604080822060018101805482546001600160a01b03198116331790935534909155915191926001600160a01b0390911691829184156108fc02918591818181858888f193505050501580156104dc573d6000803e3d6000fd5b50505050565b600154600160a01b900460ff16156105255760405162461bcd60e51b815260206004820152600660248201526514d51495115160d21b604482015260640161035b565b6001805460ff60a01b1916600160a01b17905561054542620151806107ce565b6005556040517f1b55ba3aa851a46be3b365aee5b5c140edd620d578922f3e8466d2cbd96f954b90600090a1565b600154600160a01b900460ff166105b45760405162461bcd60e51b81526020600482015260056024820152640854d5149560da1b604482015260640161035b565b6005544210156105ef5760405162461bcd60e51b815260040161035b906020808252600490820152630851539160e21b604082015260600190565b600154600160a81b900460ff161561062f5760405162461bcd60e51b815260206004820152600360248201526211539160ea1b604482015260640161035b565b6001805460ff60a81b1916600160a81b1790556040517f06e649079f276fcfc97b1e5cbfbb65937dac6a51ee164e3190e707e27ff345fa90600090a1565b6001600160a01b038116811461068257600080fd5b50565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156106b157600080fd5b84356106bc8161066d565b935060208501356106cc8161066d565b925060408501359150606085013567ffffffffffffffff808211156106f057600080fd5b818701915087601f83011261070457600080fd5b81358181111561071657610716610685565b604051601f8201601f19908116603f0116810190838211818310171561073e5761073e610685565b816040528281528a602084870101111561075757600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b60006020828403121561078d57600080fd5b5035919050565b6000602082840312156107a657600080fd5b81516107b18161066d565b9392505050565b634e487b7160e01b600052603260045260246000fd5b808201808211156107ef57634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220679f047a98413778e2d32a4920b1f37f1224876ec6c69e453862591d65b5f52b64736f6c63430008110033a264697066735822122020d7d0fabab1143e9db4b610a6dce2ccf2dc7bc7301006b1d626465259942ef164736f6c63430008110033",
+    "sourceMap": "110:603:26:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;216:20;;;;;-1:-1:-1;;;;;216:20:26;;;;;;-1:-1:-1;;;;;178:32:33;;;160:51;;148:2;133:18;216:20:26;;;;;;;373:338;;;;;;:::i;:::-;559:7;346:5;;-1:-1:-1;;;;;346:5:26;332:10;:19;324:28;;;;;;578:18:::1;614:5:::0;::::1;;;;;;;;-1:-1:-1::0;;;;;614:5:26::1;620:4;626:16;644:7;653:13;599:68;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;::::0;::::1;;;;;-1:-1:-1::0;578:89:26;373:338;-1:-1:-1;;;;;;373:338:26:o;-1:-1:-1:-;;;;;;;;:::o;222:173:33:-;290:20;;-1:-1:-1;;;;;339:31:33;;329:42;;319:70;;385:1;382;375:12;319:70;222:173;;;:::o;400:127::-;461:10;456:3;452:20;449:1;442:31;492:4;489:1;482:15;516:4;513:1;506:15;532:902;586:5;639:3;632:4;624:6;620:17;616:27;606:55;;657:1;654;647:12;606:55;693:6;680:20;719:4;742:18;779:2;775;772:10;769:36;;;785:18;;:::i;:::-;831:2;828:1;824:10;863:2;857:9;926:2;922:7;917:2;913;909:11;905:25;897:6;893:38;981:6;969:10;966:22;961:2;949:10;946:18;943:46;940:72;;;992:18;;:::i;:::-;1028:2;1021:22;1078:18;;;1154:15;;;1150:24;;;1112:15;;;;-1:-1:-1;1186:15:33;;;1183:35;;;1214:1;1211;1204:12;1183:35;1250:2;1242:6;1238:15;1227:26;;1262:142;1278:6;1273:3;1270:15;1262:142;;;1344:17;;1332:30;;1382:12;;;;1295;;;;1262:142;;;1422:6;532:902;-1:-1:-1;;;;;;;532:902:33:o;1439:744::-;1575:6;1583;1591;1599;1652:3;1640:9;1631:7;1627:23;1623:33;1620:53;;;1669:1;1666;1659:12;1620:53;1692:29;1711:9;1692:29;:::i;:::-;1682:39;;1740:38;1774:2;1763:9;1759:18;1740:38;:::i;:::-;1730:48;;1829:2;1818:9;1814:18;1801:32;1852:18;1893:2;1885:6;1882:14;1879:34;;;1909:1;1906;1899:12;1879:34;1932:61;1985:7;1976:6;1965:9;1961:22;1932:61;:::i;:::-;1922:71;;2046:2;2035:9;2031:18;2018:32;2002:48;;2075:2;2065:8;2062:16;2059:36;;;2091:1;2088;2081:12;2059:36;;2114:63;2169:7;2158:8;2147:9;2143:24;2114:63;:::i;:::-;2104:73;;;1439:744;;;;;;;:::o;2188:435::-;2241:3;2279:5;2273:12;2306:6;2301:3;2294:19;2332:4;2361:2;2356:3;2352:12;2345:19;;2398:2;2391:5;2387:14;2419:1;2429:169;2443:6;2440:1;2437:13;2429:169;;;2504:13;;2492:26;;2538:12;;;;2573:15;;;;2465:1;2458:9;2429:169;;;-1:-1:-1;2614:3:33;;2188:435;-1:-1:-1;;;;;2188:435:33:o;2628:746::-;-1:-1:-1;;;;;3007:15:33;;;2989:34;;3059:15;;;3054:2;3039:18;;3032:43;3111:15;;3106:2;3091:18;;3084:43;2969:3;3158:2;3143:18;;3136:31;;;2932:4;;3190:57;;3227:19;;3219:6;3190:57;:::i;:::-;3296:9;3288:6;3284:22;3278:3;3267:9;3263:19;3256:51;3324:44;3361:6;3353;3324:44;:::i;:::-;3316:52;2628:746;-1:-1:-1;;;;;;;;2628:746:33:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "createNFTAuction(address,address,uint256[],uint256[])": "d5777e05",
+    "owner()": "8da5cb5b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"NftAuctionCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nft\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_paymentReceiver\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"_nftIds\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_startingBids\",\"type\":\"uint256[]\"}],\"name\":\"createNFTAuction\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/AuctionDeployer.sol\":\"AuctionDeployer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708\",\"dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV\"]},\"src/AuctionDeployer.sol\":{\"keccak256\":\"0xe99a0422ed265e65efc64f161dd29b8f8fff98f91920f277b2e268baf0bc2ed9\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2b03dc364139a1cd5ae143678dc8973899c74060e978ee079a0411d6301d3b0a\",\"dweb:/ipfs/QmT14apRDwbjjpT3MS6WCoMPEot9rzpzYPVz6DuS7pkd2M\"]},\"src/nftAuction.sol\":{\"keccak256\":\"0xbd08bbd9264390235bb117ed6eeed6ee14a5b7b4557d23ba8784052af54b2ab4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://56a7da1675e2b12c371805831b66a575f56b93dd09f1c4d87d47827bcbfef95d\",\"dweb:/ipfs/QmPxAEtyCtrTZfeseY4RXztGa4P8eEAsoKF2Pbab9ayt3Y\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "NftAuctionCreated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_nft",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_paymentReceiver",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "_nftIds",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "_startingBids",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "createNFTAuction",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/AuctionDeployer.sol": "AuctionDeployer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+        "keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
+        "urls": [
+          "bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
+          "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
+        ],
+        "license": "MIT"
+      },
+      "src/AuctionDeployer.sol": {
+        "keccak256": "0xe99a0422ed265e65efc64f161dd29b8f8fff98f91920f277b2e268baf0bc2ed9",
+        "urls": [
+          "bzz-raw://2b03dc364139a1cd5ae143678dc8973899c74060e978ee079a0411d6301d3b0a",
+          "dweb:/ipfs/QmT14apRDwbjjpT3MS6WCoMPEot9rzpzYPVz6DuS7pkd2M"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/nftAuction.sol": {
+        "keccak256": "0xbd08bbd9264390235bb117ed6eeed6ee14a5b7b4557d23ba8784052af54b2ab4",
+        "urls": [
+          "bzz-raw://56a7da1675e2b12c371805831b66a575f56b93dd09f1c4d87d47827bcbfef95d",
+          "dweb:/ipfs/QmPxAEtyCtrTZfeseY4RXztGa4P8eEAsoKF2Pbab9ayt3Y"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/AuctionDeployer.sol",
+    "id": 29293,
+    "exportedSymbols": {
+      "AuctionDeployer": [
+        29292
+      ],
+      "nftAuction": [
+        29596
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:674:26",
+    "nodes": [
+      {
+        "id": 29223,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:26",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 29225,
+        "nodeType": "ImportDirective",
+        "src": "64:44:26",
+        "nodes": [],
+        "absolutePath": "src/nftAuction.sol",
+        "file": "./nftAuction.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 29293,
+        "sourceUnit": 29597,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 29224,
+              "name": "nftAuction",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 29596,
+              "src": "72:10:26",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 29292,
+        "nodeType": "ContractDefinition",
+        "src": "110:603:26",
+        "nodes": [
+          {
+            "id": 29233,
+            "nodeType": "EventDefinition",
+            "src": "141:70:26",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "6642f568694788b2363d3f04ae3035a025a92ee354693abc4e3924ce2b7cf6b5",
+            "name": "NftAuctionCreated",
+            "nameLocation": "147:17:26",
+            "parameters": {
+              "id": 29232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29227,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "181:6:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29233,
+                  "src": "165:22:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29226,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29229,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "194:6:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29233,
+                  "src": "189:11:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29228,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "189:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29231,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "207:2:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29233,
+                  "src": "202:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29230,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "202:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:46:26"
+            }
+          },
+          {
+            "id": 29235,
+            "nodeType": "VariableDeclaration",
+            "src": "216:20:26",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "231:5:26",
+            "scope": 29292,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 29234,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "216:7:26",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 29244,
+            "nodeType": "FunctionDefinition",
+            "src": "243:48:26",
+            "nodes": [],
+            "body": {
+              "id": 29243,
+              "nodeType": "Block",
+              "src": "256:35:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 29241,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 29238,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 29235,
+                      "src": "266:5:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 29239,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "274:3:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 29240,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "278:6:26",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "274:10:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "266:18:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 29242,
+                  "nodeType": "ExpressionStatement",
+                  "src": "266:18:26"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 29236,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:2:26"
+            },
+            "returnParameters": {
+              "id": 29237,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "256:0:26"
+            },
+            "scope": 29292,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 29255,
+            "nodeType": "ModifierDefinition",
+            "src": "297:70:26",
+            "nodes": [],
+            "body": {
+              "id": 29254,
+              "nodeType": "Block",
+              "src": "316:51:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 29250,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 29247,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "332:3:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 29248,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "336:6:26",
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "332:10:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 29249,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 29235,
+                          "src": "346:5:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "332:19:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 29246,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "324:7:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 29251,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "324:28:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 29252,
+                  "nodeType": "ExpressionStatement",
+                  "src": "324:28:26"
+                },
+                {
+                  "id": 29253,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "360:1:26"
+                }
+              ]
+            },
+            "name": "onlyOwner",
+            "nameLocation": "306:9:26",
+            "parameters": {
+              "id": 29245,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "316:0:26"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 29291,
+            "nodeType": "FunctionDefinition",
+            "src": "373:338:26",
+            "nodes": [],
+            "body": {
+              "id": 29290,
+              "nodeType": "Block",
+              "src": "567:144:26",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    29274
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 29274,
+                      "mutability": "mutable",
+                      "name": "auction",
+                      "nameLocation": "589:7:26",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 29290,
+                      "src": "578:18:26",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_nftAuction_$29596",
+                        "typeString": "contract nftAuction"
+                      },
+                      "typeName": {
+                        "id": 29273,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 29272,
+                          "name": "nftAuction",
+                          "nameLocations": [
+                            "578:10:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 29596,
+                          "src": "578:10:26"
+                        },
+                        "referencedDeclaration": 29596,
+                        "src": "578:10:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_nftAuction_$29596",
+                          "typeString": "contract nftAuction"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 29284,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 29278,
+                        "name": "owner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29235,
+                        "src": "614:5:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 29279,
+                        "name": "_nft",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29257,
+                        "src": "620:4:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 29280,
+                        "name": "_paymentReceiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29259,
+                        "src": "626:16:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 29281,
+                        "name": "_nftIds",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29262,
+                        "src": "644:7:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      },
+                      {
+                        "id": 29282,
+                        "name": "_startingBids",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29265,
+                        "src": "653:13:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      ],
+                      "id": 29277,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "599:14:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$_t_contract$_nftAuction_$29596_$",
+                        "typeString": "function (address,address,address,uint256[] memory,uint256[] memory) returns (contract nftAuction)"
+                      },
+                      "typeName": {
+                        "id": 29276,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 29275,
+                          "name": "nftAuction",
+                          "nameLocations": [
+                            "603:10:26"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 29596,
+                          "src": "603:10:26"
+                        },
+                        "referencedDeclaration": 29596,
+                        "src": "603:10:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_nftAuction_$29596",
+                          "typeString": "contract nftAuction"
+                        }
+                      }
+                    },
+                    "id": 29283,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "599:68:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_nftAuction_$29596",
+                      "typeString": "contract nftAuction"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "578:89:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 29287,
+                        "name": "auction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29274,
+                        "src": "693:7:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_nftAuction_$29596",
+                          "typeString": "contract nftAuction"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_nftAuction_$29596",
+                          "typeString": "contract nftAuction"
+                        }
+                      ],
+                      "id": 29286,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "685:7:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": {
+                        "id": 29285,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "685:7:26",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 29288,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "685:16:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 29271,
+                  "id": 29289,
+                  "nodeType": "Return",
+                  "src": "678:23:26"
+                }
+              ]
+            },
+            "functionSelector": "d5777e05",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 29268,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 29267,
+                  "name": "onlyOwner",
+                  "nameLocations": [
+                    "540:9:26"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 29255,
+                  "src": "540:9:26"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "540:9:26"
+              }
+            ],
+            "name": "createNFTAuction",
+            "nameLocation": "382:16:26",
+            "parameters": {
+              "id": 29266,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29257,
+                  "mutability": "mutable",
+                  "name": "_nft",
+                  "nameLocation": "416:4:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29291,
+                  "src": "408:12:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29256,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29259,
+                  "mutability": "mutable",
+                  "name": "_paymentReceiver",
+                  "nameLocation": "438:16:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29291,
+                  "src": "430:24:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29258,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "430:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29262,
+                  "mutability": "mutable",
+                  "name": "_nftIds",
+                  "nameLocation": "478:7:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29291,
+                  "src": "464:21:26",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 29260,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "464:4:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 29261,
+                    "nodeType": "ArrayTypeName",
+                    "src": "464:6:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29265,
+                  "mutability": "mutable",
+                  "name": "_startingBids",
+                  "nameLocation": "509:13:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29291,
+                  "src": "495:27:26",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 29263,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "495:4:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 29264,
+                    "nodeType": "ArrayTypeName",
+                    "src": "495:6:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "398:134:26"
+            },
+            "returnParameters": {
+              "id": 29271,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29270,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29291,
+                  "src": "559:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29269,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "559:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "558:9:26"
+            },
+            "scope": 29292,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AuctionDeployer",
+        "contractDependencies": [
+          29596
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          29292
+        ],
+        "name": "AuctionDeployer",
+        "nameLocation": "119:15:26",
+        "scope": 29293,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 26
+}

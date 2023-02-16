@@ -1,0 +1,273 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b50600080546001600160a01b031916331790556091806100306000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80638da5cb5b14602d575b600080fd5b600054603f906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f3fea26469706673582212203a8a48541b2d19d60228ecae1e7baf71b7b89df3fedca15caba16132a6335fb364736f6c63430008110033",
+    "sourceMap": "65:103:19:-:0;;;118:48;;;;;;;;;-1:-1:-1;141:5:19;:18;;-1:-1:-1;;;;;;141:18:19;149:10;141:18;;;65:103;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80638da5cb5b14602d575b600080fd5b600054603f906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f3fea26469706673582212203a8a48541b2d19d60228ecae1e7baf71b7b89df3fedca15caba16132a6335fb364736f6c63430008110033",
+    "sourceMap": "65:103:19:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;91:20;;;;;-1:-1:-1;;;;;91:20:19;;;;;;-1:-1:-1;;;;;178:32:22;;;160:51;;148:2;133:18;91:20:19;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "owner()": "8da5cb5b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/EX1Auction.sol\":\"EX1Auction\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/EX1Auction.sol\":{\"keccak256\":\"0x8758687edc34d3f6e151084cee67b39530090bdbcaed8879ff373c29e45a26d3\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://0a971179f24b40c7e2de3c45c17c7857221a4ce7a45679e99b0eac0dc252bc8e\",\"dweb:/ipfs/QmUZJH732255pwUePW1EpmyZuqyhQbhs8RtHdau9gDZJvk\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/EX1Auction.sol": "EX1Auction"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/EX1Auction.sol": {
+        "keccak256": "0x8758687edc34d3f6e151084cee67b39530090bdbcaed8879ff373c29e45a26d3",
+        "urls": [
+          "bzz-raw://0a971179f24b40c7e2de3c45c17c7857221a4ce7a45679e99b0eac0dc252bc8e",
+          "dweb:/ipfs/QmUZJH732255pwUePW1EpmyZuqyhQbhs8RtHdau9gDZJvk"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/EX1Auction.sol",
+    "id": 26780,
+    "exportedSymbols": {
+      "EX1Auction": [
+        26779
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:129:19",
+    "nodes": [
+      {
+        "id": 26767,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:19",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 26779,
+        "nodeType": "ContractDefinition",
+        "src": "65:103:19",
+        "nodes": [
+          {
+            "id": 26769,
+            "nodeType": "VariableDeclaration",
+            "src": "91:20:19",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "106:5:19",
+            "scope": 26779,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 26768,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "91:7:19",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 26778,
+            "nodeType": "FunctionDefinition",
+            "src": "118:48:19",
+            "nodes": [],
+            "body": {
+              "id": 26777,
+              "nodeType": "Block",
+              "src": "131:35:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 26775,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 26772,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26769,
+                      "src": "141:5:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 26773,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "149:3:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 26774,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "153:6:19",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "149:10:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "141:18:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 26776,
+                  "nodeType": "ExpressionStatement",
+                  "src": "141:18:19"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 26770,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:2:19"
+            },
+            "returnParameters": {
+              "id": 26771,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "131:0:19"
+            },
+            "scope": 26779,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "EX1Auction",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          26779
+        ],
+        "name": "EX1Auction",
+        "nameLocation": "74:10:19",
+        "scope": 26780,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 19
+}
