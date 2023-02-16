@@ -3,6 +3,11 @@ pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
+/**
+ * @title nftAuction
+ * @dev A contract for conducting an auction of non-fungible tokens (NFTs) on the Ethereum blockchain.
+ */
+
 interface IERC721 {
     function safeTransferFrom(address from, address to, uint tokenId) external;
 
@@ -12,10 +17,24 @@ interface IERC721 {
 }
 
 contract nftAuction is IERC721Receiver  {
+    /**
+     * @dev Emitted when the auction starts.
+     */
     event Start();
+
+    /**
+     * @dev Emitted when the auction ends.
+     */
     event End();
+
+    /**
+     * @dev Emit bid details if it goes thorough.
+     */
     event Bid(address indexed sender, uint amount, uint id);
 
+    /**
+     * @dev Struct to keep bid details of an nft.
+     */
     struct BidDetails{
         address highestBidder;
         uint highestBid;
@@ -31,7 +50,13 @@ contract nftAuction is IERC721Receiver  {
     uint public endTime;
     mapping(uint => BidDetails) public bids;
 
-
+    /**
+     * @dev Constructor for the auction contract.
+     * @param _nft The address of the NFT contract.
+     * @param _paymentReceiver The address of the payment receiver/seller.
+     * @param _nftIds An array of NFT IDs to be auctioned.
+     * @param _startingBids An array of starting bids for the NFTs.
+     */
     constructor(address _owner, address _nft, address _paymentReceiver, uint[] memory _nftIds, uint[] memory _startingBids) {
         owner = _owner;
         nft = IERC721(_nft);
@@ -41,6 +66,14 @@ contract nftAuction is IERC721Receiver  {
      
     }
 
+    modifier onlyOwner {
+      require(msg.sender == owner);
+      _;
+   }
+
+    /**
+     * @dev Function for the auction to start.
+     */
     function start() external {
         require(!started, "STRTED");
         started = true;
@@ -49,6 +82,12 @@ contract nftAuction is IERC721Receiver  {
         emit Start();
     }
 
+    /**
+     * @dev Places a bid on an NFT in the auction.
+     * @dev When new highest bidder bids old bidders funds are automatically sent back
+        easier for in contract accounting and they can rebid.
+     * @param Id The ID of the NFT being bid on.
+     */
     function bid(uint Id) external payable {
 
         require(started, "!STRT");
@@ -67,8 +106,11 @@ contract nftAuction is IERC721Receiver  {
         bids[Id].highestBid = msg.value;
 
         payable(currentBidder).transfer(currentBid);
+        emit Bid(msg.sender,msg.value,Id);
     }
-
+    /**
+     * @dev Function for the auction to end.
+     */
     function end() external {
         require(started, "!STRT");
         require(block.timestamp >= endTime, "!END");
@@ -79,7 +121,8 @@ contract nftAuction is IERC721Receiver  {
     }
 
     function claim(uint Id) external {
-         nft.safeTransferFrom(address(this), bids[Id].highestBidder, Id);
+        require(ended, "END");
+        nft.safeTransferFrom(address(this), bids[Id].highestBidder, Id);
     }
 
     /**

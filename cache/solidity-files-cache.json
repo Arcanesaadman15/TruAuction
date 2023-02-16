@@ -1120,7 +1120,7 @@
       }
     },
     "src/AuctionDeployer.sol": {
-      "lastModificationDate": 1676481866028,
+      "lastModificationDate": 1676542201979,
       "contentHash": "cf5c165bc0280e1929f500a9f43f854c",
       "sourceName": "src/AuctionDeployer.sol",
       "solcConfig": {
@@ -1163,8 +1163,8 @@
       }
     },
     "src/nftAuction.sol": {
-      "lastModificationDate": 1676482142170,
-      "contentHash": "1837e56394780713d8087a8bd7b03957",
+      "lastModificationDate": 1676542246948,
+      "contentHash": "ae07e57937ff3c674726ef80798be777",
       "sourceName": "src/nftAuction.sol",
       "solcConfig": {
         "settings": {
@@ -1259,8 +1259,8 @@
       }
     },
     "test/nftTest.t.sol": {
-      "lastModificationDate": 1676541384253,
-      "contentHash": "d42c6eda1833fd671a501116eb1931ba",
+      "lastModificationDate": 1676542109633,
+      "contentHash": "7d580d2e5639f3e300693feec3e35f79",
       "sourceName": "test/nftTest.t.sol",
       "solcConfig": {
         "settings": {

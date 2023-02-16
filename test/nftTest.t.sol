@@ -56,4 +56,23 @@ contract nftTest is BaseSetUpTest {
         vm.deal(bidder2, 1 ether);
         nftAuction(auction).bid{value: 4000}(1);
     }
+
+    function testEndAuction() public subtest{
+        vm.prank(auctionOwner);
+        uint256[] memory _nftIds = new uint256[](5);
+        uint256[] memory _startingBids = new uint256[](5);
+        address auction = Deployer.createNFTAuction(address(erc721), seller, _nftIds, _startingBids);
+        vm.prank(auctionOwner);
+        nftAuction(auction).start();
+        vm.stopPrank();
+
+        _mintNft(auction,1);
+
+        vm.prank(bidder1);
+        vm.deal(bidder1, 1 ether);
+        nftAuction(auction).bid{value: 2000}(1);
+
+        vm.prank(bidder2);
+
+    }
 }
