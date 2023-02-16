@@ -74,10 +74,10 @@ contract nftAuction is IERC721Receiver  {
     /**
      * @dev Function for the auction to start.
      */
-    function start() external {
+    function start() public {
         require(!started, "STRTED");
         started = true;
-        endTime = block.timestamp + 1 days;
+        endTime = block.timestamp + 1 minutes;
 
         emit Start();
     }
@@ -113,7 +113,7 @@ contract nftAuction is IERC721Receiver  {
      */
     function end() external {
         require(started, "!STRT");
-        require(block.timestamp >= endTime, "!END");
+        require(block.timestamp > endTime, "!END");
         require(!ended, "END");
 
         ended = true;

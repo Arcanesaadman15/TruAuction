@@ -1163,8 +1163,8 @@
       }
     },
     "src/nftAuction.sol": {
-      "lastModificationDate": 1676542246948,
-      "contentHash": "ae07e57937ff3c674726ef80798be777",
+      "lastModificationDate": 1676542885271,
+      "contentHash": "a870685733939a91ba361edc584082ff",
       "sourceName": "src/nftAuction.sol",
       "solcConfig": {
         "settings": {
@@ -1259,8 +1259,8 @@
       }
     },
     "test/nftTest.t.sol": {
-      "lastModificationDate": 1676542109633,
-      "contentHash": "7d580d2e5639f3e300693feec3e35f79",
+      "lastModificationDate": 1676542870749,
+      "contentHash": "4fb6643f4d8855b71c54067878282245",
       "sourceName": "test/nftTest.t.sol",
       "solcConfig": {
         "settings": {
